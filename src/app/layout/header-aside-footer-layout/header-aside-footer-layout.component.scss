@@ -1,0 +1,14 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+@media (min-width: 768px) {
+  .layout {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 15rem repeat(10, 1fr);
+    grid-template-rows: 50px auto;
+  }
+}
