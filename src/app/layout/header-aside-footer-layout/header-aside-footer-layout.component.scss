@@ -9,6 +9,22 @@
     display: grid;
     height: 100vh;
     grid-template-columns: 15rem repeat(10, 1fr);
-    grid-template-rows: 50px auto;
+    grid-template-rows: 5.75rem auto 5.75rem;
   }
+}
+
+header {
+  grid-column: span 11;
+}
+
+aside {
+  grid-column: span 1;
+}
+
+main {
+  grid-column: span 10;
+}
+
+footer {
+  grid-column: span 11;
 }
