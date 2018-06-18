@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {environment} from '../../../environments/environment';
 
 @Component({
   selector: 'app-header',
@@ -10,14 +11,8 @@ export class HeaderComponent implements OnInit {
   constructor() {
   }
 
-  title = 'TsukaTsuki';
-  headerLinks = [
-    {link: '', name: 'home', icon: 'home'},
-    {link: 'archives', name: 'archives', icon: 'archive'},
-    {link: 'about', name: 'about', icon: 'user'},
-    {link: 'categories', name: 'categories', icon: 'th'},
-    {link: 'note', name: 'note', icon: 'archive'},
-  ];
+  title = environment.title;
+  headerLinks = environment.headerLinks;
 
   ngOnInit() {
   }

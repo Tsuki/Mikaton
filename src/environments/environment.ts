@@ -3,7 +3,15 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  title: 'TsukaTsuki',
+  headerLinks: [
+    {link: '', name: 'home', icon: 'home'},
+    {link: 'archives', name: 'archives', icon: 'archive'},
+    {link: 'about', name: 'about', icon: 'user'},
+    {link: 'categories', name: 'categories', icon: 'th'},
+    {link: 'note', name: 'note', icon: 'archive'},
+  ]
 };
 
 /*
