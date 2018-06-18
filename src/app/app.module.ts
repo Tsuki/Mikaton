@@ -9,6 +9,8 @@ import {HeaderAsideFooterResponsiveLayoutComponent} from './layout/header-aside-
 import {HeaderComponent} from './component/header/header.component';
 import {AsideComponent} from './component/aside/aside.component';
 import {FooterComponent} from './component/footer/footer.component';
+import { ArticleComponent } from './component/article/article.component';
+import { PageComponent } from './page/page/page.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import {FooterComponent} from './component/footer/footer.component';
     HeaderAsideFooterResponsiveLayoutComponent,
     HeaderComponent,
     AsideComponent,
-    FooterComponent
+    FooterComponent,
+    ArticleComponent,
+    PageComponent
   ],
   imports: [
     BrowserModule,

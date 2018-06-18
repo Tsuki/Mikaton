@@ -1,0 +1,59 @@
+<article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" [routerLink]="post.path">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" [content]="post.name">
+      <meta itemprop="description" [content]="post.description">
+      <meta itemprop="image" [content]="post.image">
+    </span>
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" [content]="post.name">
+    </span>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" [routerLink]="post.path" itemprop="url"> {{post.title}} </a>
+      </h1>
+      <div class="post-meta">
+        <span class="post-time">
+            <span class="post-meta-item-icon">
+            <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time title="Created: 2018-06-11 23:47:45 / Modified: 16:57:44" itemprop="dateCreated datePublished"
+                  [dateTime]="post.modified"> {{post.modified|date:'y-MM-dd'}} </time>
+        </span>
+        <span class="post-comments-count">
+          <span class="post-meta-divider">|</span>
+           <span class="post-meta-item-icon">
+            <i class="fa fa-comment-o"></i>
+            </span>
+            <a [routerLink]="post.path" fragment="comments" itemprop="discussionUrl">
+            <span class="post-comments-count disqus-comment-count" [attr.data-disqus-identifier]="post.path"
+                  itemprop="commentCount"></span>
+            </a>
+        </span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+      <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+        <div class="post-gallery-row">
+          <!--<a class="post-gallery-img fancybox"-->
+          <!--href="https://as.bitinn.net/upload/cjh9c1pbt00tk6u5np6pyxfi0.1200.jpg"-->
+          <!--rel="gallery_cjiai3vop0000r0nscncdmgrr"-->
+          <!--itemscope itemtype="http://schema.org/ImageObject" itemprop="url">-->
+          <img [src]="post.poster" itemprop="contentUrl"/>
+          <!--</a>-->
+        </div>
+      </div>
+      {{post.content}}
+      <!--noindex-->
+      <div class="post-button text-center">
+        <a class="btn" [routerLink]="post.path" [fragment]="'more'" rel="contents">Read more &raquo;</a>
+      </div>
+      <!--/noindex-->
+    </div>
+    <!--<footer class="post-footer">-->
+    <!--<div class="post-eof"></div>-->
+    <!--</footer>-->
+  </div>
+</article>
