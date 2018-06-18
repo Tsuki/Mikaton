@@ -8,13 +8,13 @@
   .layout {
     display: grid;
     height: 100vh;
-    grid-template-columns: 15rem repeat(10, 1fr);
-    grid-template-rows: 5.75rem auto 5.75rem;
+    grid-template-columns: min-content auto;
+    grid-template-rows: min-content auto min-content;
   }
 }
 
 header {
-  grid-column: span 11;
+  grid-column: span 2;
 }
 
 aside {
@@ -22,9 +22,9 @@ aside {
 }
 
 main {
-  grid-column: span 10;
+  grid-column: span 1;
 }
 
 footer {
-  grid-column: span 11;
+  grid-column: span 2;
 }

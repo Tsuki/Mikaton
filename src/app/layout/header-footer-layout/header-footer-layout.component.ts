@@ -7,9 +7,6 @@ import {Component, OnInit} from '@angular/core';
       <header>
         <app-header></app-header>
       </header>
-      <aside>
-        <app-aside></app-aside>
-      </aside>
       <main>
         <router-outlet></router-outlet>
       </main>

@@ -22,7 +22,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
-  displayNav(node): void {
+  displayNav(node: HTMLElement): void {
     if (node.classList.contains('site-nav-on')) {
       node.classList.remove('site-nav-on');
     } else {
